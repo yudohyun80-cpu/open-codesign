@@ -68,6 +68,9 @@ docs/
 # Internal marketing drafts — not for public repo
 promo-copy/
 
+# Internal brand references (locally-extracted design systems from private decks)
+brand-refs/
+
 # Demo speedup source files — not used in README
 website/public/demos/_speedup/
 
