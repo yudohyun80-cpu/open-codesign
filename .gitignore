@@ -28,6 +28,7 @@ test-results/
 .env
 .env.*
 !.env.example
+*.env
 scripts/.smoke-keys.env
 
 # Editor
