@@ -179,7 +179,7 @@ function destinationPathForSource(destPath: string, sourcePath: string): string 
   if (sourceExt.length === 0) return destPath;
   const parsed = path.parse(destPath);
   if (parsed.ext.toLowerCase() === sourceExt.toLowerCase()) return destPath;
-  return path.join(parsed.dir, `${parsed.name}${sourceExt}`);
+  return path.posix.join(parsed.dir.replaceAll(path.sep, '/'), `${parsed.name}${sourceExt}`);
 }
 
 export async function runScaffold(req: ScaffoldRequest): Promise<ScaffoldResult> {
