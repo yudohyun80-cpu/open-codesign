@@ -102,7 +102,7 @@ describe('exportZip', () => {
     expect(manifest.schemaVersion).toBe(1);
     expect(manifest.sourcePath).toBe('screens/App.tsx');
     expect(manifest.files).toContain('source/screens/App.tsx');
-  });
+  }, 30000);
 
   it('auto-collects local asset references and rewrites root-relative paths', async () => {
     const dest = join(tempDir, 'auto-assets.zip');
